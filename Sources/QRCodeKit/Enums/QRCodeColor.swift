@@ -14,7 +14,6 @@ public enum QRCodeColor {
     var color: (foreground: UIColor, background: UIColor)? {
         switch self {
         case .default: return nil
-            
         case .custom(let forground, let background): return (forground, background)
         }
     }

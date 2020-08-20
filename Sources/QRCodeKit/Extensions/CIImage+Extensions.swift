@@ -20,8 +20,8 @@ extension CIImage {
     func tinted(_ foreground: UIColor, _ background: UIColor) -> CIImage? {
         let colorFilter = CIFilter.falseColor()
         colorFilter.setValue(self, forKey: "inputImage")
-        colorFilter.setValue(background.ciColor, forKey: "inputColor0")
-        colorFilter.setValue(foreground.ciColor, forKey: "inputColor1")
+        colorFilter.setValue(background.coreImageColor, forKey: "inputColor0")
+        colorFilter.setValue(foreground.coreImageColor, forKey: "inputColor1")
         return colorFilter.outputImage
     }
 }
